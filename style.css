@@ -1,0 +1,161 @@
+/* General styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .navbar-brand {
+    font-size: 24px;
+  }
+  
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Layout Styling */
+  main {
+    display: flex;
+    margin-top: 70px; /* space for navbar */
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .left-menu {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    transition: width 0.3s ease;
+  }
+  
+  .left-menu.collapsed {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .left-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .left-menu ul li {
+    margin: 15px 0;
+  }
+  
+  .left-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .left-menu ul li a:hover {
+    color: #007BFF;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .feature-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .feature-box h2 {
+    margin-top: 0;
+  }
+  
+  .right-panel {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right-panel h2 {
+    margin-top: 0;
+  }
+  
+  .right-panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .right-panel ul li {
+    margin: 10px 0;
+  }
+  
+  .right-panel ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 992px) and (min-width: 768px) {
+    .left-menu {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 767px) and (min-width: 600px) {
+    .left-menu {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .left-menu {
+      width: 100px;
+    }
+    .right-panel {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
